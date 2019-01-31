@@ -2,9 +2,10 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/CSS" href="guessnumber.style.css">
+  <script type="text/javascript" src="guessnumber.main.js"></script>
   <title>Number Guesser</title>
  </head>
-<body>
+<body onload="setDefaults()">
 
 <!--Header Bar on Top-->
   <header>
@@ -21,19 +22,19 @@
 <section class="left">
   <div class="range">
   	<h3>Set Range</h3>
-  	<input class="range"></input>
-  	<input class="range"></input>
+  	<input id="min" class="minrange"></input>
+  	<input id= "max" class="maxrange"></input>
   	<button class="update">Update</button>
   </div>
 
   <div class="guesses">
   	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
-  	<input class="name"></input>
-  	<input class="guess">
+  	<input class="name-one"></input>
+  	<input class="guess-one">
   	<h3>Challenger 2</h3>
-  	<input class="name"></input>
-  	<input class="guess"></input>
+  	<input class="name-two"></input>
+  	<input class="guess-two"></input>
   	<button class="submit-guess">Submit Guess</button>
   	<button class="reset-game">Reset Game</button>
   	<button class="clear-game">Clear Game</button>
