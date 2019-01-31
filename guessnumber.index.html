@@ -8,9 +8,10 @@
 
 <!--Header Bar on Top-->
   <header>
-  	<h1><strong>Number</strong>Guesser</h1>
+  	<h1><span class="bold">Number</span> 
+    <span class="light">Guesser</span></h1>
   	<p class="lines">
-  		<span>ULTIMATE CHALLENGER EDITION</span>
+  		<span class="light white">ULTIMATE CHALLENGER EDITION</span>
   	</p>
   </header>
 
@@ -21,48 +22,50 @@
 <section class="left">
   <div class="range">
   	<h3>Set Range</h3>
-  	<input class="range"></input>
-  	<input class="range"></input>
-  	<button class="update">Update</button>
+  	<input class="range-buttons"></input>
+  	<input class="range-buttons"></input>
+  	<button class="update">UPDATE</button>
   </div>
 
   <div class="guesses">
   	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
-  	<input class="name"></input>
-  	<input class="guess">
+  	<input class="name-button"></input>
+  	<input class="guess-button">
   	<h3>Challenger 2</h3>
-  	<input class="name"></input>
-  	<input class="guess"></input>
+  	<input class="name-button"></input>
+  	<input class="guess-button"></input>
   	<button class="submit-guess">Submit Guess</button>
-  	<button class="reset-game">Reset Game</button>
-  	<button class="clear-game">Clear Game</button>
+  	<button class="light-button">Reset Game</button>
+  	<button class="light-button">Clear Game</button>
   </div>
 
   <div class="latest-score">
   	<h3>Latest Score</h3>
   <!--I think we can flex box this-->
-  <article class="challenger-one">
+  <div class="challengers">
+    <article class="challenger-one">
   	  <h4 class="challenger-one">Challenger 1 Name</h4>
-  	  <p>Current guess</p>
-  	  <p class="current-guess">97</p>
-  	  <p class="guessmessage">that's too high</p>
+  	  <p><span class="light">Current guess</span></p>
+     <p class="current-guess">97</p>
+     <p class="guessmessage"><span class="light">that's too high</span></p>
     </article>
-  <article class="challenger-two">
-  	<h4 class="challenger-two">Challenger 2 Name</h4>
-  	<p>Current guess</p>
-  	<p class="current-guess">97</p>
-  	<p class="guessmessage">that's too high</p>
+    <article class="challenger-two">
+  	 <h4 class="challenger-two">Challenger 2 Name</h4>
+  	 <p><span class="light">Current guess</span></p>
+  	 <p class="current-guess">97</p>
+  	 <p class="guessmessage"><span class="light">that's too high</span></p>
   </article>
+  </div>
   </div>
 </section>
 
 <!--Right Side AKA The Results-->
 <section class="right">
 <!--First Card-->
-	<div class="winner-card">
-		<!--I think we could use flex box for the top and bottom of these cards or a list -->  
-		<div class="top-card">
+	<!-- <!-- <!-- <div class="winner-card">
+		<!--I think we could use flex box for the top and bottom of these cards or a list  
+		<div class="cards top-card">
       <p class="top-card">Challenger 1 Name</p>
       <p class="top-card">VS</p>
       <p class="top-card>">Challenger 2 Name</p>
@@ -80,14 +83,27 @@
       <img class="x-icon">
 	  </div>
 
-<!--Second Card-->
-	<div class="winner-card">
+Second Card
+	<div class="cards winner-card">
 	</div>
-<!--Third Card-->
-	<div class="winner-card">
+Third Card
+	<div class="cards winner-card">
 	</div>
 </section>
+-->
+
+  <div class="cards">
+    <div class="card-one">
+    <p>CHALLENGER 1 NAME vs CHALLENGER 2 NAME</p>
+  </div>
+  </div>
+  <div class="cards">c2
+  </div>
+  <div class="cards card-three">c3
+  </div>
+
+
 
 </section>
-</body>
+</body> 
 </html>
