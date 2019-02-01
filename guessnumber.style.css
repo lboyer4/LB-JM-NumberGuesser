@@ -50,9 +50,9 @@ h1 {
 
 .range {
 	background-color: white;
-	border-color: #D0D2D3;
-	border-style: solid;
-	border-width: 2px;
+
+
+	border: solid 2px #EFEFEF;
 	height: 105px;
 	margin: 15px 0px 0px 15px;
 	padding: 0px 0px 10px 15px;
@@ -71,10 +71,8 @@ h1 {
 	margin: 0px 0px 0px 0;
 }
 
-.range-inputs {
-	border-color: #D0D2D3;
-	border-style: solid;
-	border-width: 2px;
+.range-inputs{
+	border: solid 2px #EFEFEF;
 	height: 28px;
 	margin: 0px 15px 0px 0px;
 	width: 155px;
@@ -95,21 +93,20 @@ h1 {
 
 .guesses {
 	background-color: white;
-	border-color: #D0D2D3;
-	border-style: solid;
-	border-width: 2px;
-	height: 325px;
+  border: solid 2px #EFEFEF;
 	margin: 15px 15px 0px 15px;
 	padding: 0px 0px 10px 15px;
 	width: 490px;
 }
 
 .name-input {
+  border: solid 2px #EFEFEF;
 	height: 32px;
 	width: 296px;
 }
 
 .guess-input {
+	border: solid 2px #EFEFEF;
 	height: 32px;
 	width: 156px;
 }
@@ -142,9 +139,7 @@ h1 {
 
 .latest-score {
 	background-color: white;
-	border-color: #D0D2D3;
-	border-style: solid;
-	border-width: 2px;
+  border: solid 2px #EFEFEF;
 	height: 200px;
 	margin: 15px 15px 0px 15px;
 	padding: 0px 0px 10px 15px;
@@ -152,7 +147,7 @@ h1 {
 }
 
 .divider {
-	border: 1px solid #D0D2D3;
+  border: 1px solid #EFEFEF;
 }
 
 h3 {
@@ -187,7 +182,7 @@ section.left{
 	border-style: solid;
 	border-width: 1px;
 	display: inline-block;
-	height: 730px;
+  height: 655px;
 	margin: 0;
 }
 
@@ -208,9 +203,12 @@ section.right {
 	border-color: #AAAAAA;
 	border-style: solid;
 	border-width: 2px;
+
+	display: flex;
+  flex-direction: column;
 	height: 190px;
 	width: 465px;
-  margin: 15px 20px 0px 0px;
+  margin: 18px 20px 0px 0px;
 }
 
 .card-one {
@@ -218,6 +216,16 @@ section.right {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-end;
+	margin: 0 0 10px 0;
+}
+
+.card-two {
+	align-items: center;
+}
+
+.card-three {
+	align-items: center;
+	margin: 10px 0 0 0
 }
 
 .little-text {
@@ -225,8 +233,7 @@ section.right {
 }
 
 .card-divider {
-	border: 1px solid #D0D2D3;
-	/*margin: 0px 0 120px 0;*/
+	border: 1px solid #EFEFEF;
 	width: 442px;
 }
 
@@ -240,7 +247,17 @@ section.right {
 	margin: 0px 0px 15px 0px;
 }
 
-/*font*/
+
+.number-of-guesses {
+	display: inline-block;
+	margin: 13px 18px 0 -320px;
+}
+
+.minutes-played {
+	display: inline-block;
+	margin: -22px 0 0 0;
+}
+
 .bold {
 	font-family: Open Sans;
 	font-weight: 700;

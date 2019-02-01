@@ -2,6 +2,20 @@ var randomNumber = null;
 // var min;
 // var max;
 
+<<<<<<< HEAD
+var nameInputOne = document.querySelector('#name-input-one');
+var nameInputTwo = document.querySelector('#name-input-two');
+var nameButton = document.querySelector('#guess-button');
+var challengerNameOne = document.querySelector('#challenger-one');
+var challengerNameTwo = document.querySelector('#challenger-two');
+
+nameButton.addEventListener('click', renameFunction);
+
+function renameFunction() {
+  challengerNameOne.innerText = nameInputOne.value;
+  challengerNameTwo.innerText = nameInputTwo.value;
+}
+=======
 function setDefaults() { 
 	makeRandomNumber();
 }
@@ -48,4 +62,5 @@ if (playerTwoText > randomNumber) {
  playerTwoText ='Too Low';
 } else { playerTwoText = 'Correct!';
 }}
+>>>>>>> 12b9ab08ca8e0f6309212408e3d5634d3d6c7ee1
 
