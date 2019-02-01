@@ -50,6 +50,8 @@ h1 {
 
 .range {
 	background-color: white;
+
+
 	border: solid 2px #EFEFEF;
 	height: 105px;
 	margin: 15px 0px 0px 15px;
@@ -69,7 +71,7 @@ h1 {
 	margin: 0px 0px 0px 0;
 }
 
-.range-inputs {
+.range-inputs{
 	border: solid 2px #EFEFEF;
 	height: 28px;
 	margin: 0px 15px 0px 0px;
@@ -91,14 +93,14 @@ h1 {
 
 .guesses {
 	background-color: white;
-	border: solid 2px #EFEFEF;
+  border: solid 2px #EFEFEF;
 	margin: 15px 15px 0px 15px;
 	padding: 0px 0px 10px 15px;
 	width: 490px;
 }
 
 .name-input {
-	border: solid 2px #EFEFEF;
+  border: solid 2px #EFEFEF;
 	height: 32px;
 	width: 296px;
 }
@@ -137,7 +139,7 @@ h1 {
 
 .latest-score {
 	background-color: white;
-	border: solid 2px #EFEFEF;
+  border: solid 2px #EFEFEF;
 	height: 200px;
 	margin: 15px 15px 0px 15px;
 	padding: 0px 0px 10px 15px;
@@ -145,7 +147,7 @@ h1 {
 }
 
 .divider {
-	border: 1px solid #EFEFEF;
+  border: 1px solid #EFEFEF;
 }
 
 h3 {
@@ -180,7 +182,7 @@ section.left{
 	border-style: solid;
 	border-width: 1px;
 	display: inline-block;
-	height: 655px;
+  height: 655px;
 	margin: 0;
 }
 
@@ -201,6 +203,7 @@ section.right {
 	border-color: #AAAAAA;
 	border-style: solid;
 	border-width: 2px;
+
 	display: flex;
   flex-direction: column;
 	height: 190px;
@@ -244,6 +247,7 @@ section.right {
 	margin: 0px 0px 15px 0px;
 }
 
+
 .number-of-guesses {
 	display: inline-block;
 	margin: 13px 18px 0 -320px;
@@ -254,7 +258,6 @@ section.right {
 	margin: -22px 0 0 0;
 }
 
-/*font*/
 .bold {
 	font-family: Open Sans;
 	font-weight: 700;
