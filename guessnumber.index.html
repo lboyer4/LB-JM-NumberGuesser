@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" type="text/CSS" href="guessnumber.style.css">
+  <script type="text/javascript" src="guessnumber.main.js"></script>
   <title>Number Guesser</title>
  </head>
-<body>
+<body onload="setDefaults()">
 
 <!--Header Bar on Top-->
   <header>
@@ -24,14 +25,16 @@
   	<h3>Set Range</h3>
     <p class="p-range-one">Min Range</p> 
     <p class="p-range-two">Max Range</p><br>
-  	<input class="range-inputs"></input>
-  	<input class="range-inputs"></input>
-  	<button class="update">UPDATE</button>
+  	<input id="min" class="minrange"></input>
+  	<input id="max" class="maxrange"></input>
+  	<button class="update" onclick="buttonSetRange()">UPDATE</button>
+
   </div>
 
   <div class="guesses">
   	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
+<<<<<<< HEAD
   	<input class="name-input" id="name-input-one"></input>
   	<input class="guess-input">
   	<h3>Challenger 2</h3>
@@ -40,6 +43,18 @@
   	<button class="submit-guess" id="guess-button">Submit Guess</button>
   	<button class="light-button">Reset Game</button>
   	<button class="light-button">Clear Game</button>
+=======
+
+  	<input class="name-one"></input>
+  	<input class="guess-one" id="guess-one">
+  	<h3>Challenger 2</h3>
+  	<input class="name-two"></input>
+  	<input class="guess-two" id="guess-two"></input>
+  	<button class="submit-guess" onclick="makeGuesses()">Submit Guess</button>
+  	<button class="reset-game">Reset Game</button>
+  	<button class="clear-game">Clear Game</button>
+
+>>>>>>> 12b9ab08ca8e0f6309212408e3d5634d3d6c7ee1
   </div>
 
   <div class="latest-score">
@@ -49,15 +64,16 @@
     <article class="challenger-one">
   	  <h4 class="challenger-one">Challenger 1 Name</h4>
   	  <p><span class="light">Current guess</span></p>
-     <p class="current-guess">97</p>
-     <p class="guessmessage"><span class="light">that's too high</span></p>
+     <p class="current-guess" id="current-guess-one">97</p>
+     <p class="guessmessage" id="guesser-one-text"><span class="light">that's too high</span></p>
     </article>
     <div class="divider"></div>
     <article class="challenger-two">
   	 <h4 class="challenger-two">Challenger 2 Name</h4>
   	 <p><span class="light">Current guess</span></p>
   	 <p class="current-guess">97</p>
-  	 <p class="guessmessage"><span class="light">that's too high</span></p>
+  	 <p class="guessmessage"id="guesser-two-text"><span class="light">that's too high</span></p>
+
   </article>
   </div>
   </div>
