@@ -24,3 +24,28 @@ function buttonSetRange(evt) {
 		document.querySelector('.high-range').innerText = maxInput.value;
 	}
 } 
+
+function makeGuesses() {
+	var playerOneGuess = document.getElementById('guess-one').value;
+	var playerTwoGuess = document.getElementById('guess-two').value;
+
+	var playerOneText= document.getElementById('guesser-one-text').innerText;
+	var playerTwoText= document.getElementById('guesser-two-text').innerText;
+
+	// var playerOneText.innerText = playerOneGuess;
+ //  var playerTwoText.innerText = playerTwoGuess;
+
+if (playerOneGuess > randomNumber) {
+	playerOneText = 'Too High';
+} else if (playerOneGuess < randomNumber) { 
+	playerOneText = 'Too Low';
+} else { playerOneText = 'Correct!';
+}
+
+if (playerTwoText > randomNumber) {
+	playerTwoText = 'Too High';
+} else if (playerTwoGuess < randomNumber) {
+ playerTwoText ='Too Low';
+} else { playerTwoText = 'Correct!';
+}}
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" type="text/CSS" href="guessnumber.style.css">
@@ -31,11 +31,11 @@
   	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
   	<input class="name-one"></input>
-  	<input class="guess-one">
+  	<input class="guess-one" id="guess-one">
   	<h3>Challenger 2</h3>
   	<input class="name-two"></input>
-  	<input class="guess-two"></input>
-  	<button class="submit-guess">Submit Guess</button>
+  	<input class="guess-two" id="guess-two"></input>
+  	<button class="submit-guess" onclick="makeGuesses()">Submit Guess</button>
   	<button class="reset-game">Reset Game</button>
   	<button class="clear-game">Clear Game</button>
   </div>
@@ -46,14 +46,14 @@
   <article class="challenger-one">
   	  <h4 class="challenger-one">Challenger 1 Name</h4>
   	  <p>Current guess</p>
-  	  <p class="current-guess">97</p>
-  	  <p class="guessmessage">that's too high</p>
+  	  <p class="current-guess-one">97</p>
+  	  <p class="guessmessage" id="guesser-one-text">that's too high</p>
     </article>
   <article class="challenger-two">
   	<h4 class="challenger-two">Challenger 2 Name</h4>
   	<p>Current guess</p>
-  	<p class="current-guess">97</p>
-  	<p class="guessmessage">that's too high</p>
+  	<p class="current-guess-two">97</p>
+  	<p class="guessmessage" id="guesser-two-text">that's too high</p>
   </article>
   </div>
 </section>
