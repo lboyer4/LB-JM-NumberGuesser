@@ -1,8 +1,11 @@
     <!DOCTYPE html>
 <html>
-<head>
+<head> 
+  <link rel="stylesheet" type="text/CSS" href="normalize.css">
   <link rel="stylesheet" type="text/CSS" href="guessnumber.style.css">
-  <script type="text/javascript" src="guessnumber.main.js"></script>
+
+    
+  </script>
   <title>Number Guesser</title>
  </head>
 <body onload="setDefaults()">
@@ -34,24 +37,14 @@
   <div class="guesses">
   	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
-
-  	<input class="name-input" id="name-input-one"></input>
+    <input class="name-input" id="name-input-one"></input>
   	<input class="guess-input">
   	<h3>Challenger 2</h3>
   	<input class="name-input" id="name-input-two"></input>
   	<input class="guess-input"></input>
-  	<button class="submit-guess" id="guess-button">Submit Guess</button>
+  	<button class="submit-guess" id="guess-button" onclick="makeGuesses()">Submit Guess</button>
   	<button class="light-button">Reset Game</button>
   	<button class="light-button">Clear Game</button>
-
-  	<input class="name-one"></input>
-  	<input class="guess-one" id="guess-one">
-  	<h3>Challenger 2</h3>
-  	<input class="name-two"></input>
-  	<input class="guess-two" id="guess-two"></input>
-  	<button class="submit-guess" onclick="makeGuesses()">Submit Guess</button>
-  	<button class="reset-game">Reset Game</button>
-  	<button class="clear-game">Clear Game</button>
 
   </div>
 
