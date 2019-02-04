@@ -50,8 +50,6 @@ h1 {
 
 .range {
 	background-color: white;
-
-
 	border: solid 2px #EFEFEF;
 	height: 105px;
 	margin: 15px 0px 0px 15px;
@@ -122,6 +120,24 @@ h1 {
 	height: 30px;
 	margin: 32px 5px 0px 0px;
 	width: 160px;
+}
+
+.empty {
+  border-color: #dd1972;
+  height: 32px;
+  width: auto;
+  /*height: 8px;
+  width: auto;*/
+}
+
+.error-hidden {
+  display: none;
+}
+
+.error-shown {
+  color: #dd1972;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .light-button {
@@ -211,6 +227,10 @@ section.right {
   margin: 18px 20px 0px 0px;
 }
 
+.cards-hidden {
+	display: none;
+}
+
 .card-one {
 	display: flex;
 	flex-direction: column;
@@ -256,6 +276,19 @@ section.right {
 .minutes-played {
 	display: inline-block;
 	margin: -22px 0 0 0;
+}
+
+.close-button {
+	background-color: #6e6e6e;
+  border-radius: 50%;
+  color: #D1D2D4;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  height: 22px;
+  margin: -22px 0 0 400px;
+  padding: 1px 0 1px 1px;
+  width: 22px;
 }
 
 .bold {
