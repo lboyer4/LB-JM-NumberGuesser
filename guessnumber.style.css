@@ -50,6 +50,8 @@ h1 {
 
 .range {
 	background-color: white;
+
+
 	border: solid 2px #EFEFEF;
 	height: 120px;
 	margin: 15px 0 0 15px;
@@ -69,6 +71,7 @@ h1 {
 	margin: 0 0 10px 12px;
 }
 
+<<<<<<< HEAD
 input.minrange {
 border: solid 2px #EFEFEF;
 	height: 28px;
@@ -79,6 +82,10 @@ border: solid 2px #EFEFEF;
 
 input.maxrange {
 border: solid 2px #EFEFEF;
+=======
+.range-inputs{
+	border: solid 2px #EFEFEF;
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 	height: 28px;
 	margin: 0 15px 0 0;
 	width: 120px;
@@ -100,6 +107,7 @@ border: solid 2px #EFEFEF;
 .guesses {
 	background-color: white;
   border: solid 2px #EFEFEF;
+<<<<<<< HEAD
 	margin: 15px 15px 0 15px;
 	padding: 0 0 10px 15px;
 	width: 400px;
@@ -111,6 +119,11 @@ label {
 
 label.guess {
 	margin-left: 170px;
+=======
+	margin: 15px 15px 0px 15px;
+	padding: 0px 0px 10px 15px;
+	width: 490px;
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 }
 
 .name-input {
@@ -157,8 +170,13 @@ label.guess {
 .latest-score {
 	background-color: white;
   border: solid 2px #EFEFEF;
+<<<<<<< HEAD
 	height: 180px;
 	margin: 15px 15px 15px 15px;
+=======
+	height: 200px;
+	margin: 15px 15px 0px 15px;
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 	padding: 0px 0px 10px 15px;
 	width: 400px;
 }
@@ -211,6 +229,10 @@ section.left{
 	border-style: solid;
 	border-width: 1px;
 	display: inline-block;
+<<<<<<< HEAD
+=======
+  height: 655px;
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 	margin: 0;
 }
 
@@ -234,6 +256,7 @@ hr{
 	border-color: #AAA;
 	border-style: solid;
 	border-width: 2px;
+
 	display: flex;
   flex-direction: column;
 	height: 190px;
@@ -274,9 +297,26 @@ hr{
 
 .winner-text {
 	font-size: 25px;
+<<<<<<< HEAD
 	margin: 0px 0px 5px 0px;
 }
 
+=======
+	margin: 0px 0px 15px 0px;
+}
+
+
+.number-of-guesses {
+	display: inline-block;
+	margin: 13px 18px 0 -320px;
+}
+
+.minutes-played {
+	display: inline-block;
+	margin: -22px 0 0 0;
+}
+
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 .bold {
 	font-family: Open Sans;
 	font-weight: 700;
