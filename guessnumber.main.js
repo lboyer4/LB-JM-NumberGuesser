@@ -22,38 +22,33 @@ function buttonSetRange(evt) {
 	}
 } 
 
-function makeGuesses () {
-	var changeThis = document.getElementById('current-guess-one').value;
-	return changeThis = 5;
-}
-
 function makeGuesses() {
 	var playerOneGuess = document.getElementById('guess-one').value;
 	var playerTwoGuess = document.getElementById('guess-two').value;
 
-	var playerOneText= document.getElementById('guesser-one-text').innerText;
-	var playerTwoText= document.getElementById('guesser-two-text').innerText;
+	var playerOneText= document.querySelector('#guesser-one-text')/*.innerText;*/
+	var playerTwoText= document.querySelector('#guesser-two-text')/*.innerText;*/
 
-	console.log(playerOneText);
-	console.log(playerTwoText);
-	// var playerOneText.innerText = playerOneGuess;
- //  var playerTwoText.innerText = playerTwoGuess;
+	document.querySelector('#current-guess-one').innerText= playerOneGuess;
+	document.querySelector('#current-guess-two').innerText= playerTwoGuess;
+
 
 	if (playerOneGuess > randomNumber) {
-		playerOneText.innerText = 'Too High';
+		document.querySelector('#guesser-one-text').innerText = 'Too High';
 	} else if (playerOneGuess < randomNumber) { 
-		playerOneText = 'Too Low';
-	} else { playerOneText.innerText = 'Correct!';
+		document.querySelector('#guesser-one-text').innerText = 'Too Low';
+	} else {document.querySelector('#guesser-one-text').innerText = 'BOOM!';
 	}
 
 	if (playerTwoGuess > randomNumber) {
-		playerTwoText.innerText = 'Too High';
+		document.querySelector('#guesser-two-text').innerText = 'Too High';
 	} else if (playerTwoGuess < randomNumber) {
-	 playerTwoText ='Too Low';
-	} else { playerTwoText.innerText = 'Correct!';
+	 document.querySelector('#guesser-two-text').innerText = 'Too Low';
+	} else {document.querySelector('#guesser-two-text').innerText = 'BOOM!';
 	}
+console.log('player one text', playerTwoText);
+console.log('player two test', playerOneText);
 }
-
 
 
 // var nameInputOne = document.querySelector('#name-input-one');
