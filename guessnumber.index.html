@@ -1,8 +1,9 @@
     <!DOCTYPE html>
 <html>
-<head>
+<head> 
+  <link rel="stylesheet" type="text/CSS" href="normalize.css">
   <link rel="stylesheet" type="text/CSS" href="guessnumber.style.css">
-  <script type="text/javascript" src="guessnumber.main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Number Guesser</title>
  </head>
 <body onload="setDefaults()">
@@ -22,23 +23,42 @@
 <!--Left Side AKA The Game-->
 <section class="left">
   <div class="range">
-  	<h3>Set Range</h3>
+  	<h3 class="set-range">Set Range</h3>
     <p class="p-range-one">Min Range</p> 
-    <p class="p-range-two">Max Range</p><br>
+    <p class="p-range-two">Max Range</p>
   	<input id="min" class="minrange"></input>
+    <p class="p-range-two-two">Max Range</p>
   	<input id="max" class="maxrange"></input>
   	<button class="update" onclick="buttonSetRange()">UPDATE</button>
-
   </div>
 
   <div class="guesses">
   	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
+<<<<<<< HEAD
+    <label class="name">Name</label>
+    <label class="guess">Guess</label>
+    <input class="name-input" id="name-input-one"></input>
+    <label class="guess2">Guess</label>
+  	<input class="guess-input" id="guess-one" type="number">
+=======
 
   	<input class="name-input" id="name-input-one"></input>
   	<input class="guess-input">
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
   	<h3>Challenger 2</h3>
+  <div class="lables">
+    <label class="name" for="name-input-one">Name</label>
+    <label class="guess">Guess</label>
+  </div>
   	<input class="name-input" id="name-input-two"></input>
+<<<<<<< HEAD
+    <label class="guess2">Guess</label>
+  	<input class="guess-input" id="guess-two"></input>
+  	<button class="submit-guess" id="guess-button" onclick="makeGuesses()">SUBMIT GUESS</button>
+  	<button class="light-button" class="reset">RESET GAME</button>
+  	<button class="light-button" class="clear">CLEAR GAME</button>
+=======
   	<input class="guess-input"></input>
   	<button class="submit-guess" id="guess-button">Submit Guess</button>
   	<button class="light-button">Reset Game</button>
@@ -53,28 +73,32 @@
   	<button class="reset-game">Reset Game</button>
   	<button class="clear-game">Clear Game</button>
 
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
   </div>
 
   <div class="latest-score">
   	<h3>Latest Score</h3>
-  <!--I think we can flex box this-->
   <div class="challengers">
     <article class="challenger-one">
   	  <h4 class="challenger-one">Challenger 1 Name</h4>
   	  <p><span class="light">Current guess</span></p>
-     <p class="current-guess" id="current-guess-one">97</p>
-     <p class="guessmessage" id="guesser-one-text"><span class="light">that's too high</span></p>
+     <p class="current-guess" id="current-guess-one">00</p>
+     <p class="guessmessage" id="guesser-one-text"><span class="light"><span>---</p>
     </article>
     <div class="divider"></div>
     <article class="challenger-two">
   	 <h4 class="challenger-two">Challenger 2 Name</h4>
   	 <p><span class="light">Current guess</span></p>
-  	 <p class="current-guess">97</p>
-  	 <p class="guessmessage"id="guesser-two-text"><span class="light">that's too high</span></p>
+  	 <p class="current-guess" id="current-guess-two">00</p>
+  	 <p class="guessmessage" id="guesser-two-text"><span class="light"></span>---</p>
 
   </article>
   </div>
   </div>
+<<<<<<< HEAD
+  </section>
+  <section class="right">
+=======
 </section>
 
 <!--Right Side AKA The Results-->
@@ -84,36 +108,64 @@
   <div class="cards">
     <div class="card-one">
     <p class="little-text"><span class="bold">CHALLENGER 1 NAME</span> vs <span class="bold">CHALLENGER 2 NAME</span></p>
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
   <div class="cards">
     <div class="card-one">
+      <div class="top-of-card">
     <p class="little-text"><span class="bold" id="challenger-one">CHALLENGER 1 NAME</span> vs <span class="bold" id="challenger-two">CHALLENGER 2 NAME</span></p>
-    <div class="card-divider"></div>
+  </div>
+    <hr />
     <p class="challenger-name-text bold">CHALLENGER 2 NAME</p>
     <p class="winner-text light">WINNER</p>
-    <div class="card-divider"></div>
-    <p class="number-of-guesses"><span class="bold">47</span> <span class="light">GUESSES</span></p> 
-    <p class="minutes-played"><span class="bold">1.35</span> <span class="light">MINUTES</span></p>
+    <hr />
+    <div class="bottom-of-card">
+      <p class="number-of-guesses"><span class="bold">47</span>
+        <span class="light">GUESSES</span></p> 
+       <p class="minutes-played"><span class="bold">1.35</span> 
+        <span class="light">MINUTES</span></p>
     </div>
-  <div class="cards card-two">
+  </div>
+</div>
+
+<div class="cards">
+    <div class="card-one">
     <p class="little-text"><span class="bold" id="challenger-one">CHALLENGER 1 NAME</span> vs <span class="bold" id="challenger-two">CHALLENGER 2 NAME</span></p>
-    <div class="card-divider"></div>
+    <hr />
     <p class="challenger-name-text bold">CHALLENGER 2 NAME</p>
     <p class="winner-text light">WINNER</p>
+<<<<<<< HEAD
+    <hr />
+    <div class="bottom-of-card">
+      <p class="number-of-guesses"><span class="bold">47</span>
+        <span class="light">GUESSES</span></p> 
+       <p class="minutes-played"><span class="bold">1.35</span> 
+        <span class="light">MINUTES</span></p>
+    </div>
+=======
     <div class="card-divider"></div>
 
     <p class="number-of-guesses"><span class="bold">47</span> <span class="light">GUESSES</span></p> 
     <p class="minutes-played"><span class="bold">1.35</span> <span class="light">MINUTES</span></p>
+>>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
   </div>
-  <div class="cards card-three">
+</div>
+
+<div class="cards">
+    <div class="card-one">
     <p class="little-text"><span class="bold" id="challenger-one">CHALLENGER 1 NAME</span> vs <span class="bold" id="challenger-two">CHALLENGER 2 NAME</span></p>
-    <div class="card-divider"></div>
+    <hr />
     <p class="challenger-name-text bold">CHALLENGER 2 NAME</p>
     <p class="winner-text light">WINNER</p>
-    <div class="card-divider"></div>
-    <p class="number-of-guesses"><span class="bold">47</span> <span class="light">GUESSES</span></p> 
-    <p class="minutes-played"><span class="bold">1.35</span> <span class="light">MINUTES</span></p>
+    <hr />
+    <div class="bottom-of-card">
+      <p class="number-of-guesses"><span class="bold">47</span>
+        <span class="light">GUESSES</span></p> 
+       <p class="minutes-played"><span class="bold">1.35</span> 
+        <span class="light">MINUTES</span></p>
+    </div>
   </div>
-</section>
+</div>
+  </section>
 </body> 
 <script src="guessnumber.main.js"></script>
 </html>
