@@ -1,7 +1,4 @@
 var randomNumber = null;
-// var min;
-// var max;
-
 var nameInputOne = document.querySelector('#name-input-one');
 var nameInputTwo = document.querySelector('#name-input-two');
 var guessInputOne = document.querySelector('.guess-one');
@@ -159,8 +156,8 @@ function setDefaults() {
 }
 
 function makeRandomNumber(min = 1, max = 100) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
+	var min = Math.ceil(min);
+	var max = Math.floor(max);
 	randomNumber = Math.floor(Math.random() * (max - min)) + min;
 	console.log('what is my random number?' , randomNumber);
 	return randomNumber;
@@ -183,19 +180,27 @@ function makeGuesses() {
 	var playerOneGuess = document.getElementById('guess-one').value;
 	var playerTwoGuess = document.getElementById('guess-two').value;
 
-	var playerOneText= document.getElementById('guesser-one-text').innerText;
-	var playerTwoText= document.getElementById('guesser-two-text').innerText;
+	var playerOneText= document.querySelector('#guesser-one-text')/*.innerText;*/
+	var playerTwoText= document.querySelector('#guesser-two-text')/*.innerText;*/
 
-if (playerOneGuess > randomNumber) {
-	playerOneText.innerText = "that's too high";
-} else if (playerOneGuess < randomNumber) { 
-	playerOneText.innerText = "that's too low";
-} else { playerOneText.innerText = "correct";
+	document.querySelector('#current-guess-one').innerText= playerOneGuess;
+	document.querySelector('#current-guess-two').innerText= playerTwoGuess;
+
+
+	if (playerOneGuess > randomNumber) {
+		document.querySelector('#guesser-one-text').innerText = 'Too High';
+	} else if (playerOneGuess < randomNumber) { 
+		document.querySelector('#guesser-one-text').innerText = 'Too Low';
+	} else {document.querySelector('#guesser-one-text').innerText = 'BOOM!';
+	}
+
+	if (playerTwoGuess > randomNumber) {
+		document.querySelector('#guesser-two-text').innerText = 'Too High';
+	} else if (playerTwoGuess < randomNumber) {
+	 document.querySelector('#guesser-two-text').innerText = 'Too Low';
+	} else {document.querySelector('#guesser-two-text').innerText = 'BOOM!';
+	}
+console.log('player one text', playerTwoText);
+console.log('player two test', playerOneText);
 }
 
-if (playerTwoText > randomNumber) {
-	playerTwoText.innerText = "that's too high";
-} else if (playerTwoGuess < randomNumber) {
- playerTwoText.innerText = "that's too low";
-} else { playerTwoText.innerText = "correct";
-}}
