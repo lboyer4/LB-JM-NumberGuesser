@@ -50,8 +50,6 @@ h1 {
 
 .range {
 	background-color: white;
-
-
 	border: solid 2px #EFEFEF;
 	height: 120px;
 	margin: 15px 0 0 15px;
@@ -71,7 +69,7 @@ h1 {
 	margin: 0 0 10px 12px;
 }
 
-<<<<<<< HEAD
+
 input.minrange {
 border: solid 2px #EFEFEF;
 	height: 28px;
@@ -82,10 +80,8 @@ border: solid 2px #EFEFEF;
 
 input.maxrange {
 border: solid 2px #EFEFEF;
-=======
 .range-inputs{
 	border: solid 2px #EFEFEF;
->>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 	height: 28px;
 	margin: 0 15px 0 0;
 	width: 120px;
@@ -107,7 +103,6 @@ border: solid 2px #EFEFEF;
 .guesses {
 	background-color: white;
   border: solid 2px #EFEFEF;
-<<<<<<< HEAD
 	margin: 15px 15px 0 15px;
 	padding: 0 0 10px 15px;
 	width: 400px;
@@ -119,11 +114,6 @@ label {
 
 label.guess {
 	margin-left: 170px;
-=======
-	margin: 15px 15px 0px 15px;
-	padding: 0px 0px 10px 15px;
-	width: 490px;
->>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 }
 
 .name-input {
@@ -153,6 +143,24 @@ label.guess {
 	height:40px;
 }
 
+.empty {
+  border-color: #dd1972;
+  height: 32px;
+  width: auto;
+  /*height: 8px;
+  width: auto;*/
+}
+
+.error-hidden {
+  display: none;
+}
+
+.error-shown {
+  color: #dd1972;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
 .light-button {
 	background-color: #D1D2D4;
 	border: none;
@@ -170,13 +178,8 @@ label.guess {
 .latest-score {
 	background-color: white;
   border: solid 2px #EFEFEF;
-<<<<<<< HEAD
-	height: 180px;
-	margin: 15px 15px 15px 15px;
-=======
 	height: 200px;
 	margin: 15px 15px 0px 15px;
->>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 	padding: 0px 0px 10px 15px;
 	width: 400px;
 }
@@ -229,10 +232,6 @@ section.left{
 	border-style: solid;
 	border-width: 1px;
 	display: inline-block;
-<<<<<<< HEAD
-=======
-  height: 655px;
->>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
 	margin: 0;
 }
 
@@ -264,7 +263,12 @@ hr{
   margin: 18px 65px 0 55px;
 }
 
+.cards-hidden {
+	display: none;
+}
+  
 .bottom-of-card{
+
 	display: flex;
 }
 
@@ -297,12 +301,7 @@ hr{
 
 .winner-text {
 	font-size: 25px;
-<<<<<<< HEAD
 	margin: 0px 0px 5px 0px;
-}
-
-=======
-	margin: 0px 0px 15px 0px;
 }
 
 
@@ -316,7 +315,19 @@ hr{
 	margin: -22px 0 0 0;
 }
 
->>>>>>> 58d2a9c55523b25a92d32fb724b16ce24d9c12ef
+.close-button {
+	background-color: #6e6e6e;
+  border-radius: 50%;
+  color: #D1D2D4;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  height: 22px;
+  margin: -22px 0 0 400px;
+  padding: 1px 0 1px 1px;
+  width: 22px;
+}
+  
 .bold {
 	font-family: Open Sans;
 	font-weight: 700;
