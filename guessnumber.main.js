@@ -10,12 +10,28 @@ var guessButton = document.querySelector('#guess-button');
 var guessInputs = [nameInputOne, nameInputTwo, guessInputOne, guessInputTwo];
 var challengerNameOne = document.querySelector('#challenger-one');
 var challengerNameTwo = document.querySelector('#challenger-two');
+var nameInputs = document.querySelectorAll('.name-input');
+var guessInputs = document.querySelectorAll('.guess-input');
+var updateButton = document.querySelector(".update");
 
+for (var i = 0; i < nameInputs.length; i++) {
+	nameInputs[i].addEventListener('keydown', checkAlphaNumeric);
+}
+function checkAlphaNumeric(e) {
+var re = /[\W]/i;
+	if (re.test(e.key)) {
+  e.preventDefault();
+}
+}
+
+updateButton.addEventListener('click', buttonSetRange);
 guessButton.addEventListener('click', renameFunction);
 
 function renameFunction() {
   challengerNameOne.innerText = nameInputOne.value;
   challengerNameTwo.innerText = nameInputTwo.value;
+  challengerOneWin();
+  challengerTwoWin();
 }
 
 var error = document.querySelector(".error-hidden");
@@ -70,9 +86,9 @@ var tooSomethingOne = document.querySelector("#guesser-one-text");
 var tooSomethingTwo = document.querySelector("#guesser-two-text");
 
 function challengerOneWin() {
- if (guessInputOne.value > randomNumber){
+ if (parseInt(guessInputOne.value) > randomNumber){
   tooSomethingOne.innerText = "that's too high";
- } else if (guessInputOne.value < randomNumber){
+ } else if (parseInt(guessInputOne.value) < randomNumber){
   tooSomethingOne.innerText = "that's too low";
  } else {
   tooSomethingOne.innerText = "winner!"
@@ -80,18 +96,26 @@ function challengerOneWin() {
  }
 }
 
-// function challengerTwoWin(){
-//  if (guessInputTwo.value > randomNumber){
-//   tooSomethingTwo.innerText = "that's too high";
-//  } else if (guessInputTwo.value < randomNumber){
-//   tooSomethingTwo.innerText = "that's too low";
-//  } else {
-//   tooSomethingTwo.innerText = "winner!";
-//   createCard();
-//  }
-// }
+function challengerTwoWin(){
+ if (parseInt(guessInputTwo.value) > randomNumber){
+  tooSomethingTwo.innerText = "that's too high";
+ } else if (parseInt(guessInputTwo.value) < randomNumber){
+  tooSomethingTwo.innerText = "that's too low";
+ } else {
+  tooSomethingTwo.innerText = "winner!";
+  createCard();
+ }
+}
 
-function createCard(challengerOne, challengerTwo, winner) {
+function outOfRange() {
+  var minInput = document.getElementById('min');
+  var maxInput = document.getElementById('max');
+
+  if (parseInt(guessInputOne.value) > parseInt(minInput.value)) {
+    alert("Guess outside range.");
+  }
+}
+
   var challengerOne = nameInputOne.value;
   var challengerTwo = nameInputTwo.value;
   var rightSide = document.querySelector(".right-side");
@@ -113,7 +137,12 @@ function createCard(challengerOne, challengerTwo, winner) {
       </div>
     </div>`
   rightSide.innerHTML = newCard + rightSide.innerHTML;
-}
+
+// function createCard(challengerOne, challengerTwo, winner) {
+  // debugger;
+	// rightSide.innerHTML = newCard + rightSide.innerHTML;
+  // rightSide.innerHTML
+// }
 
 // var closeButton = document.querySelector('.close-button');
 // var cardOne = document.querySelector('.card-one')
@@ -137,10 +166,12 @@ function makeRandomNumber(min = 1, max = 100) {
 	return randomNumber;
 }
 
+// .toString()
 function buttonSetRange(evt) {
 	var minInput = document.getElementById('min');
 	var maxInput = document.getElementById('max');
 	if (min != null && max != null) {
+    outOfRange();
 		makeRandomNumber(minInput.value.toString(), maxInput.value.toString());
 		console.log(document.querySelector('.low-range').innerText);
 		document.querySelector('.low-range').innerText = minInput.value;
@@ -154,7 +185,7 @@ function makeGuesses() {
 
 	var playerOneText= document.getElementById('guesser-one-text').innerText;
 	var playerTwoText= document.getElementById('guesser-two-text').innerText;
-	
+
 if (playerOneGuess > randomNumber) {
 	playerOneText.innerText = "that's too high";
 } else if (playerOneGuess < randomNumber) { 
