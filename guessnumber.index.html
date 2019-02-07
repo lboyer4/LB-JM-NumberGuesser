@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/CSS" href="normalize.css">
   <link rel="stylesheet" type="text/CSS" href="guessnumber.style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Number Guesser</title>
  </head>
-<body>
-
+<body onload="setDefaults()">
+  
 <!--Header Bar on Top-->
-  <header>
-  	<h1><strong>Number</strong>Guesser</h1>
-  	<p class="lines">
-  		<span>ULTIMATE CHALLENGER EDITION</span>
-  	</p>
+<header>
+  <h1><span class="bold">NUMBER</span> 
+      <span class="light">GUESSER</span></h1>
+  	<p class="lines"><span class="light white">ULTIMATE CHALLENGER EDITION</span></p>
   </header>
 
 <!--Main Screen-->
@@ -21,73 +22,58 @@
 <section class="left">
   <div class="range">
   	<h3>Set Range</h3>
-  	<input class="range"></input>
-  	<input class="range"></input>
-  	<button class="update">Update</button>
+      <p class="p-range-one">Min Range</p> 
+      <p class="p-range-two">Max Range</p><br>
+  	   <input type="number" id="min" class="minrange range-inputs"></input>
+  	   <input type="number" id="max" class="maxrange range-inputs"></input>
+  	 <button class="update" onclick="buttonSetRange()">UPDATE</button>
   </div>
-
   <div class="guesses">
-  	<p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
+    <p>The Current Range is <span class="low-range">1</span> to <span class="high-range">100</span></p>
   	<h3>Challenger 1</h3>
-  	<input class="name"></input>
-  	<input class="guess">
-  	<h3>Challenger 2</h3>
-  	<input class="name"></input>
-  	<input class="guess"></input>
-  	<button class="submit-guess">Submit Guess</button>
-  	<button class="reset-game">Reset Game</button>
-  	<button class="clear-game">Clear Game</button>
+      <div class="label">
+        <label>Name</label><label class="guess">Guess</label>
+      </div>
+  	<input class="name-input name-one" id="name-input-one"></input>
+    <input type="number" class="guess-input guess-one" id="guess-one">
+    <div class="blank-error">
+      <p class="error-hidden error"><img src="images/error-triangle.png">Please enter a name and a guess.</p>
+    </div>
+  	 <h3>Challenger 2</h3>
+    <div class="label">
+      <label>Name</label><label class="guess">Guess</label>
+    </div>
+  	 <input class="name-input name-two" id="name-input-two"></input>
+  	 <input type="number" class="guess-input guess-two" id="guess-two"></input>
+    <div class="blank-error">
+      <p class="error-hidden"><img src="images/error-triangle.png">Please enter a name and a guess.</p>
+    </div>
+  	<button class="submit-guess" id="guess-button">SUBMIT GUESS</button>
+  	<button class="light-button reset-game">RESET GAME</button>
+  	<button class="light-button clear-game">CLEAR GAME</button>
   </div>
-
   <div class="latest-score">
   	<h3>Latest Score</h3>
-  <!--I think we can flex box this-->
-  <article class="challenger-one">
-  	  <h4 class="challenger-one">Challenger 1 Name</h4>
-  	  <p>Current guess</p>
-  	  <p class="current-guess">97</p>
-  	  <p class="guessmessage">that's too high</p>
+      <div class="challengers">
+        <article class="challenger-one">
+  	     <h4 class="challenger-one" id="challenger-one">Challenger 1 Name</h4>
+  	     <p><span class="light">Current guess</span></p>
+          <p class="current-guess" id="current-guess-one">00</p>
+         <p class="guessmessage" id="guesser-one-text"><span class="light">---</span></p>
+        </article>
+     <div class="divider"></div>
+    <article class="challenger-two">
+  	 <h4 class="challenger-two" id="challenger-two">Challenger 2 Name</h4>
+  	 <p><span class="light">Current guess</span></p>
+  	 <p class="current-guess" id="current-guess-two">00</p>
+  	 <p class="guessmessage"id="guesser-two-text"><span class="light">---</span></p>
     </article>
-  <article class="challenger-two">
-  	<h4 class="challenger-two">Challenger 2 Name</h4>
-  	<p>Current guess</p>
-  	<p class="current-guess">97</p>
-  	<p class="guessmessage">that's too high</p>
-  </article>
   </div>
+  </div> 
 </section>
-
 <!--Right Side AKA The Results-->
 <section class="right">
-<!--First Card-->
-	<div class="winner-card">
-		<!--I think we could use flex box for the top and bottom of these cards or a list -->  
-		<div class="top-card">
-      <p class="top-card">Challenger 1 Name</p>
-      <p class="top-card">VS</p>
-      <p class="top-card>">Challenger 2 Name</p>
-    </div>
-		<div>Challenger 2 Name</div>
-    <div class="win-result">
-      <h2 class="win=result">Challenger 2 Name
-      </h2>
-      <h2 class="winner">WINNER</h2>
-    <div class="bottom-card">
-      <p class="bottom">
-        <span class="number-guesses">47</span> GUESSES</p>
-      <p class="bottom">
-        <span class="guess-time">1.35</span>MINUTES</p>
-      <img class="x-icon">
-	  </div>
-
-<!--Second Card-->
-	<div class="winner-card">
-	</div>
-<!--Third Card-->
-	<div class="winner-card">
-	</div>
 </section>
-
-</section>
-</body>
+</body> 
+<script src="guessnumber.main.js"></script>
 </html>
